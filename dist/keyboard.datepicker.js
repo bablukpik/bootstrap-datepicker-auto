@@ -1,4 +1,15 @@
-// Bootstrap Datepicker Auto for Keyboard utilization
+/** @license
+ *
+ *             Keyboard Datepicker plugin v1.0.0
+ *
+ *             Copyright (c) 2019 Bablu Ahmed, https://github.com/bablukpik/keyboard-datepicker
+ *             Licensed under the MIT License.
+ *             http://opensource.org/licenses/mit-license
+ *
+ *             * /if (typeof window === 'object') window.keyboardDatepicker = '" + newVersion + "';/*"
+ *
+ */
+
 $(document).ready(function () {
     // initialization
     $('.datepicker').datepicker({
