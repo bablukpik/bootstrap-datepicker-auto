@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://localhost/bnsis/UsersDataEntryState -->
+<html class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths k-webkit k-webkit70 gr__localhost" lang="" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Sailor Information System || Users Data Entry State Info</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Navy, Bangladesh Navy, Sailor Information System">
+        <meta name="description" content="Sailor Information System">
+        <link rel="shortcut icon" href="http://localhost/bnsis/dist/img/fac.ico" type="image/vnd.microsoft.icon">
+        <link rel="stylesheet" href="./Sailor Information System __ Users Data Entry State Info_files/main.css">
+<link rel="stylesheet" href="./Sailor Information System __ Users Data Entry State Info_files/custom.css">
+<link rel="stylesheet" href="./Sailor Information System __ Users Data Entry State Info_files/metisMenu.css"> <!-- New metisMenu add -->
+<link rel="stylesheet" href="./Sailor Information System __ Users Data Entry State Info_files/side_menu.css">
+<link rel="stylesheet" href="./Sailor Information System __ Users Data Entry State Info_files/jquery.dataTables.min.css">
+<link rel="stylesheet" href="./Sailor Information System __ Users Data Entry State Info_files/redactor.css">
+
+<link rel="stylesheet" href="./Sailor Information System __ Users Data Entry State Info_files/morris.css">
+<!--<script>window.jQuery || document.write('<script src="dist/scripts/jquery.js"><\/script>')</script>-->
+<script src="./Sailor Information System __ Users Data Entry State Info_files/jquery.js"></script>
+<script src="./Sailor Information System __ Users Data Entry State Info_files/modernizr.js"></script>
+
+<script src="./Sailor Information System __ Users Data Entry State Info_files/jquery.min.js"></script>
+<script src="./Sailor Information System __ Users Data Entry State Info_files/jquery-ui.js"></script>
+<script src="./Sailor Information System __ Users Data Entry State Info_files/side_menu.js"></script>
+<script src="./Sailor Information System __ Users Data Entry State Info_files/jquery.validate.js"></script>
+
+<script src="./Sailor Information System __ Users Data Entry State Info_files/html5shiv-printshiv.min.js"></script>
+<script src="./Sailor Information System __ Users Data Entry State Info_files/respond.min.js"></script>
+
+<!--[if lt IE 9]--->
+<!-- Kendo Ui -->
+
+<!-- <script type="text/javascript" src="http://localhost/bnsis/dist/kendoAssest/js/jquery.min.js"></script> -->
+<script type="text/javascript" src="./Sailor Information System __ Users Data Entry State Info_files/jszip.min.js"></script>
+<script type="text/javascript" src="./Sailor Information System __ Users Data Entry State Info_files/kendo.all.min.js"></script>
+<script type="text/javascript" src="./Sailor Information System __ Users Data Entry State Info_files/kendo.web.min.js"></script>
+<script type="text/javascript" src="./Sailor Information System __ Users Data Entry State Info_files/console.js"></script>
+<link rel="stylesheet" type="text/css" href="./Sailor Information System __ Users Data Entry State Info_files/chosen.css">
+
+
+<!--<link rel="stylesheet" href="//kendo.cdn.telerik.com/2017.1.118/styles/kendo.common.min.css" />
+<link rel="stylesheet" href="">
+<link rel="stylesheet" href="//kendo.cdn.telerik.com/2017.1.118/styles/kendo.default.min.css" />
+<link rel="stylesheet" href="//kendo.cdn.telerik.com/2017.1.118/styles/kendo.default.mobile.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />-->
+
+<link rel="stylesheet" href="./Sailor Information System __ Users Data Entry State Info_files/kendo.common.min.css">
+<link rel="stylesheet" href="./Sailor Information System __ Users Data Entry State Info_files/kendo.rtl.min.css">
+<link rel="stylesheet" href="./Sailor Information System __ Users Data Entry State Info_files/kendo.default.min.css">
+<link rel="stylesheet" href="./Sailor Information System __ Users Data Entry State Info_files/kendo.default.mobile.min.css">
+<link rel="stylesheet" href="./Sailor Information System __ Users Data Entry State Info_files/sweetalert.min.css">
+
+<!--Select Picker Tree View-->
+<script src="./Sailor Information System __ Users Data Entry State Info_files/selecttreeview.js"></script>
+<link rel="stylesheet" href="./Sailor Information System __ Users Data Entry State Info_files/selecttreeview.css">
+
+
+<!-- Kendo Ui -->
+
+
+<!--[endif]-->
+
+<script type="text/javascript">
+// function printDiv(divName) {
+   
+  
+// }
+
+$(document).on("click", ".sailorProfilePrint", function () {
+    Popup($("#printablediv").html());
+});
+function Popup(data)
+{
+  var currentdate = new Date();
+  var datetime = "File: " + currentdate.getDate() + ""
+                + (currentdate.getMonth()+1)  + ""
+                + currentdate.getFullYear() + ""
+                + currentdate.getHours() + ""
+                + currentdate.getMinutes() + ""
+                + currentdate.getSeconds();
+
+  var mywindow = window.open('',datetime, 'height=800,width=1024');
+  mywindow.document.write('<html><head><title>'+datetime+'</title>');
+
+  mywindow.document.write('</head><body >');
+  mywindow.document.write(data);
+  mywindow.document.write('</body></html>');
+  mywindow.print();
+  mywindow.close();
+
+  return true;
+}
+
+$(document).on("click", ".sailorCurrStatusPrint", function () {
+    Popup($(".printCurrStatus").html());
+});
+function Popup(data)
+{
+  var currentdate = new Date();
+  var datetime = "File: " + currentdate.getDate() + ""
+                + (currentdate.getMonth()+1)  + ""
+                + currentdate.getFullYear() + ""
+                + currentdate.getHours() + ""
+                + currentdate.getMinutes() + ""
+                + currentdate.getSeconds();
+
+  var mywindow = window.open('',datetime, 'height=800,width=1024');
+  mywindow.document.write('<html><head><title>'+datetime+'</title>');
+
+  mywindow.document.write('</head><body >');
+  mywindow.document.write(data);
+  mywindow.document.write('</body></html>');
+  mywindow.print();
+  mywindow.close();
+
+  return true;
+}
+</script>
+        <style>
+            #modalSize{
+                width: 80% !important;
+                height: 80% !important;
+            }
+            .modal {
+                overflow: auto !important;
+            }
+        </style>
+
+    </head>
+    <body data-gr-c-s-loaded="true" cz-shortcut-listen="true" style="">
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+            your browser</a> to improve your experience.</div>
+        <![endif]-->
+        <style type="text/css">
+    .icon_logo{
+        height: 90px;
+        width: 90px;
+        margin-top: 10px;
+        padding: 8px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+    .dropdown-menu li{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .top_profile{
+        text-align: center;
+
+    }
+</style>
+<nav class="navbar navbar-side navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle-secondary collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://localhost/bnsis/UsersDataEntryState#" class="navbar-toggle-primary" id="menu-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="navbar-brand" href="http://localhost/bnsis/"><img src="./Sailor Information System __ Users Data Entry State Info_files/navy_logo.jpg" width="40"> Sailor Information System</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+            <!-- Right nav -->
+            <ul class="nav navbar-nav navbar-right sm" data-smartmenus-id="15548754916959836">
+                
+                    <li class=""><a href="http://localhost/bnsis/UsersDataEntryState#" class="user-menu has-submenu" id="sm-15548754916959836-1" aria-haspopup="true" aria-controls="sm-15548754916959836-2" aria-expanded="false"><i class="glyphicon glyphicon-user"></i> M R Islam,REA-II(960081) <span class="caret"></span></a>
+                        <ul class="dropdown-menu sm-nowrap" id="sm-15548754916959836-2" role="group" aria-hidden="true" aria-labelledby="sm-15548754916959836-1" aria-expanded="false" style="width: auto; display: none; top: auto; left: 0px; margin-left: 1.48438px; margin-top: 0px; min-width: 10em; max-width: 20em;">
+                            <li>
+                                <p class="top_profile">
+                                    <img class="icon_logo" src="./Sailor Information System __ Users Data Entry State Info_files/saved_resource" alt="" width="90" height="90">
+                                </p>
+                                <p>
+                                    <strong> Login :</strong>
+                                    11:51 AM  04-10-2019</p>
+                                <p><strong>User Group:</strong> Administrator</p>
+                                <a class="btn btn-primary btn-flat" href="http://localhost/bnsis/auth/logout"> Sign out</a>
+
+                            </li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>        <div id="wrapper">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper" class="ps-container" data-ps-id="4f1ae365-8832-ff1e-536e-4c695783b0cd">
+    <!-- <ul id="sidebar-menu" class="sidebar-menu"> -->
+    <ul class="sidebar-menu" id="menu">
+        <li data-toggle="collapse" data-target="#dashboard" class="collapsed">
+            <a href="http://localhost/bnsis/dashboard/index"><i class="fa fa-tachometer fa-lg"></i> Dashboard</a>
+        </li>
+                        <li data-toggle="collapse" data-target="#service_2" class="collapsed">
+                    <a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-wrench"></i>Basic Code<span class="arrow"></span></a>
+                </li>
+
+                <ul class="sub-menu collapse" id="service_2">
+
+                                            <li data-toggle="collapse" data-target="#serviceChild_2_1" class="collapsed"><a href="http://localhost/bnsis/setup/MasterSetup"><i class="fa fa-angle-right"></i> Base Setup</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_1" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Organization Information</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_1">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/organizationSetup"><i class="fa fa-angle-right"></i> Organization setup</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_2" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Branch &amp; Rank Information</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_2">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/daoGroup"><i class="fa fa-angle-right"></i> DAO Group</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/branch"><i class="fa fa-angle-right"></i> Branch Setup</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/equivalentRank"><i class="fa fa-angle-right"></i> Equivalent Rank</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/rank"><i class="fa fa-angle-right"></i> Rank</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_3" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Navy Administrative Information</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_3">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/zone"><i class="fa fa-angle-right"></i> Zone</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/area"><i class="fa fa-angle-right"></i> Area</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/shiptype"><i class="fa fa-angle-right"></i> Ship type</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/shipEstablishment"><i class="fa fa-angle-right"></i> Ship/Establishment</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/unitType"><i class="fa fa-angle-right"></i> Unit Type</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/postingUnit"><i class="fa fa-angle-right"></i> Posting Unit</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/NavyAdminRelation/navyAdminhierarchy"><i class="fa fa-angle-right"></i> Administrative Relationship</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/shipMigration"><i class="fa fa-angle-right"></i> Ship Migration</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_4" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Bangladesh Administrative Info</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_4">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/division"><i class="fa fa-angle-right"></i> Division</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/district"><i class="fa fa-angle-right"></i> District</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/thana"><i class="fa fa-angle-right"></i> Police Station</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/tree/bdadminhierarchy"><i class="fa fa-angle-right"></i> Relationship</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_5" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Public Examination</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_5">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/exam_level"><i class="fa fa-angle-right"></i> Exam Level</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/examName"><i class="fa fa-angle-right"></i> Exam Name</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/subjectGroup"><i class="fa fa-angle-right"></i> Subject/Group</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/boardUniversity"><i class="fa fa-angle-right"></i> Board/University</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/publicExRelation/pubExHierarchy"><i class="fa fa-angle-right"></i> Relationship</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_6" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Navy Examination</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_6">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/navyExamLevel"><i class="fa fa-angle-right"></i> Exam Level</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/examTypes"><i class="fa fa-angle-right"></i> Exam Type</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/navyExamName"><i class="fa fa-angle-right"></i> Exam Name</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/NavyExRelation/navyExRelation"><i class="fa fa-angle-right"></i> Relationship</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_7" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Examination Result/Grading</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_7">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/examResult"><i class="fa fa-angle-right"></i> Examination Result</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/examGred"><i class="fa fa-angle-right"></i> Examination Grade</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_8" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Part ll information</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_8">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/trade"><i class="fa fa-angle-right"></i> Trade</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/part"><i class="fa fa-angle-right"></i> Part</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_9" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Other Specialization </a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_9">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/Specialization/category"><i class="fa fa-angle-right"></i> Specialization  Category</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/Specialization"><i class="fa fa-angle-right"></i> Specialization</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_10" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Traning / Course</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_10">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/trainingLevel"><i class="fa fa-angle-right"></i> Training Level</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/trainingType"><i class="fa fa-angle-right"></i> Training Type</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/trainingName"><i class="fa fa-angle-right"></i> Training Name</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/TrainingRelation/trainHierarchy"><i class="fa fa-angle-right"></i> Relationship</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_11" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Traning Org/ Instituate</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_11">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/trainningOrganization"><i class="fa fa-angle-right"></i> Trainning Organization</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/trainingInstitute"><i class="fa fa-angle-right"></i> Training Institute</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_12" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Medal / Honour Information</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_12">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/medal"><i class="fa fa-angle-right"></i> Medal</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/JesthataPadak"><i class="fa fa-angle-right"></i> Jesthata padak</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/honor"><i class="fa fa-angle-right"></i> Honour</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_13" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Foreign visit information</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_13">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/country"><i class="fa fa-angle-right"></i> Country</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/Visitclassification"><i class="fa fa-angle-right"></i> Visit Classification</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/Visitinformation"><i class="fa fa-angle-right"></i> Visit Information</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_14" class="collapsed"><a href="http://localhost/bnsis/setup/EntryType"><i class="fa fa-angle-right"></i> Entry Type</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_14" class="collapsed"><a href="http://localhost/bnsis/setup/AppointmentType"><i class="fa fa-angle-right"></i> Appointment Type</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_14" class="collapsed"><a href="http://localhost/bnsis/setup/batchNumber"><i class="fa fa-angle-right"></i> Batch Number</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_14" class="collapsed"><a href="http://localhost/bnsis/setup/relation"><i class="fa fa-angle-right"></i> Relation to next of kin</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_14" class="collapsed"><a href="http://localhost/bnsis/setup/daoNumber"><i class="fa fa-angle-right"></i> DAO Number</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_14" class="collapsed"><a href="http://localhost/bnsis/setup/mission"><i class="fa fa-angle-right"></i> Willing/Not Willing Event</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_14" class="collapsed"><a href="http://localhost/bnsis/setup/ClearanceType"><i class="fa fa-angle-right"></i> Security Clearance Type</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_14" class="collapsed"><a href="http://localhost/bnsis/setup/language"><i class="fa fa-angle-right"></i> Language Name</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_14" class="collapsed"><a href="http://localhost/bnsis/setup/FraudulentCategory"><i class="fa fa-angle-right"></i> Fraudulent category</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_14" class="collapsed"><a href="http://localhost/bnsis/setup/offenceCatagory"><i class="fa fa-angle-right"></i> Offence Category</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_14" class="collapsed"><a href="http://localhost/bnsis/setup/retirementCauses"><i class="fa fa-angle-right"></i> Retirement Causes</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_14" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Pension</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_14">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/Allowance"><i class="fa fa-angle-right"></i> Allowance</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/allowance_children/index"><i class="fa fa-angle-right"></i> Children Allowance</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/AgeValue"><i class="fa fa-angle-right"></i> Age Value</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_15" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Report Setup</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_15">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/report/reportType"><i class="fa fa-angle-right"></i> Report Type</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/report/reportSubType"><i class="fa fa-angle-right"></i> Report Sub Type</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/report/reportTypeColumn"><i class="fa fa-angle-right"></i> ReportType Column</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/report/reportColumn"><i class="fa fa-angle-right"></i> Report Column Setup</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/report/reportColumnAlias"><i class="fa fa-angle-right"></i> Report Column Alias</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_2_16" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Others setup</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_2_16">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/pointSelection"><i class="fa fa-angle-right"></i> Point Selection</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/setup/MedicalCategory"><i class="fa fa-angle-right"></i> Medical Category</a></li>
+                                                                </ul>
+                                            
+                </ul>
+
+                                <li data-toggle="collapse" data-target="#service_3" class="collapsed">
+                    <a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-random"></i>Special Transactions<span class="arrow"></span></a>
+                </li>
+
+                <ul class="sub-menu collapse" id="service_3">
+
+                                            <li data-toggle="collapse" data-target="#serviceChild_3_1" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Sailors Information</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_3_1">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/SpecialTransection/capturingNewRecrutiInfo"><i class="fa fa-angle-right"></i> Capturing New Recruit Info</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/SpecialTransection/sailorPreview"><i class="fa fa-angle-right"></i> Sailor Details</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/overweightInfo"><i class="fa fa-angle-right"></i> Overwight Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/branchChange"><i class="fa fa-angle-right"></i> Branch Change</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/assessmentInfo"><i class="fa fa-angle-right"></i> Assessment Infromation</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/sailorRemark/"><i class="fa fa-angle-right"></i> Sailor Remarks</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/foreignVisitInfo"><i class="fa fa-angle-right"></i> Foreign Visit Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/languageInfo"><i class="fa fa-angle-right"></i> Language Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/instructorService"><i class="fa fa-angle-right"></i> Instructor Service</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/opinion"><i class="fa fa-angle-right"></i> Opinion Entry</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/fraudulentInfo"><i class="fa fa-angle-right"></i> Fraudulent Entry Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/bnRosterInfo"><i class="fa fa-angle-right"></i> BN Roster Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/specializationInfo"><i class="fa fa-angle-right"></i> Specialization Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/securityClearanceInfo"><i class="fa fa-angle-right"></i> Security Clearance Info</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/nomineeInfo"><i class="fa fa-angle-right"></i> Nominee Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/NavyIdInfo/index"><i class="fa fa-angle-right"></i> Navy ID Info</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/sailorsInfo/MLRInfo/index"><i class="fa fa-angle-right"></i> MLR Info</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_3_2" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Others Informations</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_3_2">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/othersInfo/yearlyCourse"><i class="fa fa-angle-right"></i> Yearly Course Plan</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/othersInfo/dAOAmendment"><i class="fa fa-angle-right"></i> DAO Amendmen</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/othersInfo/branchAndRankWiseSection"><i class="fa fa-angle-right"></i> Branch and Rank wise Sanction</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/othersInfo/unitWaiseSanction"><i class="fa fa-angle-right"></i> Unit wise Sanction</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/othersInfo/organizationWiseSanction"><i class="fa fa-angle-right"></i> Organization Wise sanction</a></li>
+                                                                </ul>
+                                            
+                </ul>
+
+                                <li data-toggle="collapse" data-target="#service_4" class="collapsed">
+                    <a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-exchange"></i>Regular Transactions<span class="arrow"></span></a>
+                </li>
+
+                <ul class="sub-menu collapse" id="service_4">
+
+                                            <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/examTestInfo"><i class="fa fa-angle-right"></i> Exam /Test Information</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/TrainingCourseInfo"><i class="fa fa-angle-right"></i> Training/Course Info</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/leaveInfo"><i class="fa fa-angle-right"></i> Leave Information</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/reEngagementInfo"><i class="fa fa-angle-right"></i> Re-Engagement Info</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/medicalCatInfo"><i class="fa fa-angle-right"></i> Medical Category Info</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/transferInfo"><i class="fa fa-angle-right"></i> Transfer Infromation</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/transferInfo/TransferInfoExecuteForm"><i class="fa fa-angle-right"></i> Transfer  Execute</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/movementHistory"><i class="fa fa-angle-right"></i> Movement History</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/TempMovementHistory"><i class="fa fa-angle-right"></i> Temporary Movement Info</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/gcbAwardRestore"><i class="fa fa-angle-right"></i> GCB Award/Restore</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/marriageInfo"><i class="fa fa-angle-right"></i> Marriage Informations</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/childrenInfo"><i class="fa fa-angle-right"></i> Children Infromation</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/academicInfo"><i class="fa fa-angle-right"></i> Academic Information</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/regularTransaction/pftInfo/index"><i class="fa fa-angle-right"></i> PFT Information</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_1" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Honor Activities</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_4_1">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/regularTransaction/honorActivity/medal_index"><i class="fa fa-angle-right"></i> Medal Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/regularTransaction/honorActivity/honor_index"><i class="fa fa-angle-right"></i> Honor Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/regularTransaction/honorActivity/jesthataPadak_index"><i class="fa fa-angle-right"></i> Jesthata padak Information</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_4_2" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Punishment Activities</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_4_2">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/regularTransaction/punishmentActivity"><i class="fa fa-angle-right"></i> Punishment Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/regularTransaction/markRunAbsent"><i class="fa fa-angle-right"></i> Mark Run/Absent info</a></li>
+                                                                </ul>
+                                            
+                </ul>
+
+                                <li data-toggle="collapse" data-target="#service_5" class="collapsed">
+                    <a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-cubes"></i>Reports Preparation<span class="arrow"></span></a>
+                </li>
+
+                <ul class="sub-menu collapse" id="service_5">
+
+                                            <li data-toggle="collapse" data-target="#serviceChild_5_1" class="collapsed"><a href="http://localhost/bnsis/report/RpTrainCourSet"><i class="fa fa-angle-right"></i> Training/Course Roster Criteria</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_5_1" class="collapsed"><a href="http://localhost/bnsis/report/Designer"><i class="fa fa-angle-right"></i> Report Designer</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_5_1" class="collapsed"><a href="http://localhost/bnsis/report/queryTool"><i class="fa fa-angle-right"></i> Query Tool</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_5_1" class="collapsed"><a href="http://localhost/bnsis/sailorSelection/SailorSelectionRoster/index"><i class="fa fa-angle-right"></i> Set Selection Criteria</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_5_1" class="collapsed"><a href="http://localhost/bnsis/report/bnRoster"><i class="fa fa-angle-right"></i> BN Roster Preparation</a></li>
+                                            
+                </ul>
+
+                                <li data-toggle="collapse" data-target="#service_6" class="collapsed">
+                    <a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-tasks"></i>Reports View/Print<span class="arrow"></span></a>
+                </li>
+
+                <ul class="sub-menu collapse" id="service_6">
+
+                                            <li data-toggle="collapse" data-target="#serviceChild_6_1" class="collapsed"><a href="http://localhost/bnsis/reportViewPrint/prepareCourseRoster"><i class="fa fa-angle-right"></i> Training /Course Roster</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_6_1" class="collapsed"><a href="http://localhost/bnsis/reportViewPrint/StrengthByBranch"><i class="fa fa-angle-right"></i> Strength By Branch</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_6_1" class="collapsed"><a href="http://localhost/bnsis/reportViewPrint/strengthByBDAdmin"><i class="fa fa-angle-right"></i> Strength By BD Admin</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_6_1" class="collapsed"><a href="http://localhost/bnsis/reportViewPrint/sailorNominalRoll"><i class="fa fa-angle-right"></i> Sailor Nominal Roll</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_6_1" class="collapsed"><a href="http://localhost/bnsis/reportViewPrint/SailorProfile"><i class="fa fa-angle-right"></i> Sailor Profile</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_6_1" class="collapsed"><a href="http://localhost/bnsis/report/transferProposal/index"><i class="fa fa-angle-right"></i> Transfer Proposal</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_6_1" class="collapsed"><a href="http://localhost/bnsis/reportViewPrint/daoPublish"><i class="fa fa-angle-right"></i> DAO Preview/Publish</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_6_1" class="collapsed"><a href="http://localhost/bnsis/reportViewPrint/annualAssessment"><i class="fa fa-angle-right"></i> Annual Assessment of Sailor</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_6_1" class="collapsed"><a href="http://localhost/bnsis/reportViewPrint/recommendationNotReceived"><i class="fa fa-angle-right"></i> Recommendation Not Received</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_6_1" class="collapsed"><a href="http://localhost/bnsis/reportViewPrint/yearlyCoursePlan"><i class="fa fa-angle-right"></i> Yearly Course Plan</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_6_1" class="collapsed"><a href="http://localhost/bnsis/reportViewPrint/continuousVG"><i class="fa fa-angle-right"></i> Continuous VG</a></li>
+                                            
+                </ul>
+
+                                <li data-toggle="collapse" data-target="#service_7" class="collapsed">
+                    <a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-recycle"></i>Processes<span class="arrow"></span></a>
+                </li>
+
+                <ul class="sub-menu collapse" id="service_7">
+
+                                            <li data-toggle="collapse" data-target="#serviceChild_7_1" class="collapsed"><a href="http://localhost/bnsis/process/finalAllocationOfOfficialNumber"><i class="fa fa-angle-right"></i> Preliminary/Final allocation of Official Number</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_7_1" class="collapsed"><a href="http://localhost/bnsis/process/finalAllocationOfOfficialNumber/missing_zero_engagements"><i class="fa fa-angle-right"></i> Missing Zero Engagements</a></li>
+                                            
+                </ul>
+
+                                <li data-toggle="collapse" data-target="#service_8" class="collapsed">
+                    <a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-hourglass-2"></i>Promotion Activities<span class="arrow"></span></a>
+                </li>
+
+                <ul class="sub-menu collapse" id="service_8">
+
+                                            <li data-toggle="collapse" data-target="#serviceChild_8_1" class="collapsed"><a href="http://localhost/bnsis/promotion/promotionRoster"><i class="fa fa-angle-right"></i> Set Roster Criteria</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_8_1" class="collapsed"><a href="http://localhost/bnsis/promotion/PromotionMcpoHonorary"><i class="fa fa-angle-right"></i> Promotion Roster (MCPO &amp; HSLT)</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_8_1" class="collapsed"><a href="http://localhost/bnsis/promotion/RosterPreparate"><i class="fa fa-angle-right"></i> Prepare Roster</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_8_1" class="collapsed"><a href="http://localhost/bnsis/promotion/promotionApproved"><i class="fa fa-angle-right"></i> Promotion Approve</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_8_1" class="collapsed"><a href="http://localhost/bnsis/promotion/promotionExecute"><i class="fa fa-angle-right"></i> Promotion Execute</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_8_1" class="collapsed"><a href="http://localhost/bnsis/promotion/promotionInfo"><i class="fa fa-angle-right"></i> Promotion Information</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_8_1" class="collapsed"><a href="http://localhost/bnsis/promotion/reCommendation"><i class="fa fa-angle-right"></i> Recommendation</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_8_1" class="collapsed"><a href="http://localhost/bnsis/promotion/qaAndActing"><i class="fa fa-angle-right"></i> NQ &amp; Acting Remove</a></li>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_8_1" class="collapsed"><a href="http://localhost/bnsis/promotion/reAdvancement"><i class="fa fa-angle-right"></i> Readvancement</a></li>
+                                            
+                </ul>
+
+                                <li data-toggle="collapse" data-target="#service_9" class="collapsed">
+                    <a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-sign-out"></i>Retirement Informations<span class="arrow"></span></a>
+                </li>
+
+                <ul class="sub-menu collapse" id="service_9">
+
+                                            <li data-toggle="collapse" data-target="#serviceChild_9_1" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Transactions</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_9_1">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Transactions/retirementProcess"><i class="fa fa-angle-right"></i> Retirement Process</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Transactions/finalizeRetirement"><i class="fa fa-angle-right"></i> Finalize Retirement</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_9_2" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> History Transactions</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_9_2">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/assessmentInfo"><i class="fa fa-angle-right"></i> Assessment Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/foreignVisitInfo"><i class="fa fa-angle-right"></i> Foreign visit info</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/examTestInfo"><i class="fa fa-angle-right"></i> Exam/Test Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/specializationInfo"><i class="fa fa-angle-right"></i> Specialization Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/trainingCourseInfo"><i class="fa fa-angle-right"></i> Training / Course Info</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/movementHistory"><i class="fa fa-angle-right"></i> Movement History</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/gcbAwardRestore"><i class="fa fa-angle-right"></i> GCB Award/Restore</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/leaveInfo"><i class="fa fa-angle-right"></i> Leave Info</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/reEngagementInfo"><i class="fa fa-angle-right"></i> Re-Engagement Info</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/medicalCatInfo"><i class="fa fa-angle-right"></i> Medical Category Info</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/marriageInfo"><i class="fa fa-angle-right"></i> Marriage Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/childrenInfo"><i class="fa fa-angle-right"></i> Childen Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/academicInfo"><i class="fa fa-angle-right"></i> Academic Info</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/honorActivity/medal_index"><i class="fa fa-angle-right"></i> Medal Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/honorActivity/honor_index"><i class="fa fa-angle-right"></i> Honor Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/honorActivity/jesthataPadak_index"><i class="fa fa-angle-right"></i> Jesthata Padak Info</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/punishmentActivity"><i class="fa fa-angle-right"></i> Punishmet Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/markRunAbsent"><i class="fa fa-angle-right"></i> Mark Run/Absent Info</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/promotionInfo"><i class="fa fa-angle-right"></i> Promotion Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/HistoryTran/reAdvancement"><i class="fa fa-angle-right"></i> Readvancement Info</a></li>
+                                                                </ul>
+                                            
+                </ul>
+
+                                <li data-toggle="collapse" data-target="#service_10" class="collapsed">
+                    <a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-users"></i>Pension Informations<span class="arrow"></span></a>
+                </li>
+
+                <ul class="sub-menu collapse" id="service_10">
+
+                                            <li data-toggle="collapse" data-target="#serviceChild_10_1" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Pension</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_10_1">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Pension/pensionInfo/index"><i class="fa fa-angle-right"></i> List of Pensioner</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Pension/pensionInfo/pensionSettled"><i class="fa fa-angle-right"></i> Pension Sell</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Pension/PensionInfo/protinidhi"><i class="fa fa-angle-right"></i> Protinidhi</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Pension/PensionProfile/index"><i class="fa fa-angle-right"></i> Pensioners Profile</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Transactions/sTCInformation"><i class="fa fa-angle-right"></i> STC Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Transactions/nOCInformation"><i class="fa fa-angle-right"></i> NOC Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Transactions/deathInfo"><i class="fa fa-angle-right"></i> Death Infromaton</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Transactions/reEntry"><i class="fa fa-angle-right"></i> Re-Entries Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Transactions/nomineeInfo"><i class="fa fa-angle-right"></i> Nominee Information</a></li>
+                                                                </ul>
+                                                                    <li data-toggle="collapse" data-target="#serviceChild_10_2" class="collapsed"><a href="http://localhost/bnsis/UsersDataEntryState#"><i class="fa fa-angle-right"></i> Other</a></li>
+                                                        <ul class="sub-sub-menu collapse" id="serviceChild_10_2">
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Other/DspFund"><i class="fa fa-angle-right"></i> DSP Fund Loan Taken</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Other/DspFund/defaulter"><i class="fa fa-angle-right"></i> DSP Fund Loan Defaulter</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Other/Pensioneport"><i class="fa fa-angle-right"></i> Report</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Other/IdCard"><i class="fa fa-angle-right"></i> ID Card Issue &amp; Reissue</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Pension/pensionInfo/freedomFighter"><i class="fa fa-angle-right"></i> Freedom Fighter List</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Other/bankAddInfo"><i class="fa fa-angle-right"></i> Change Bank Address Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Other/VeteranAllowance"><i class="fa fa-angle-right"></i> Veteran Allowance</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Other/WidowAllowance"><i class="fa fa-angle-right"></i> Widow Allowance</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Other/PensionBookInfo"><i class="fa fa-angle-right"></i> Pension Book Information</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Other/FatalCase"><i class="fa fa-angle-right"></i> Fatale Case Corection</a></li>
+                                                                    <li style="padding-left: 20%;"><a href="http://localhost/bnsis/Retirement/Other/PensionStop"><i class="fa fa-angle-right"></i> Pension Held / Stop</a></li>
+                                                                </ul>
+                                            
+                </ul>
+
+                    </ul>
+<div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+            <!-- /#sidebar-wrapper -->
+            <!-- <ul class="ttw-notification-menu">
+                <li id="projects" class="notification-menu-item first-item" data-url="http://localhost/bnsis/Dashboard/notifications"><a href="#">Tenders <span
+                            class="label label-danger">12</span></a></li>
+                <li id="tasks" class="notification-menu-item" data-url="http://localhost/bnsis/Dashboard/notificationsTender"><a href="#">Notice <span class="label label-danger">10</span></a></li>
+                <li id="messages" class="notification-menu-item" data-url="http://localhost/bnsis/Dashboard/notificationsMessage"><a href="#">Messages <span class="label label-danger">1</span></a>
+                </li>
+                <li id="clients" class="notification-menu-item last-item" data-url="http://localhost/bnsis/Dashboard/notificationsdWarning"><a href="#">Warnings <span class="label label-danger">2</span></a>
+                </li>
+            </ul> -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+
+                    <!--  end flash message  -->
+
+                    <div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-base" style="box-shadow: none; margin-bottom: 0;">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-md-11 col-sm-10 col-xs-8">
+                        <h3 class="panel-title">
+                            <center>Users Data Entry Statement</center>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body custom_panel">
+                <form onsubmit="return false;" class="form-horizontal frmContent" id="dgdpMainForm" method="post">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="">Start Date</label>
+                                <div class="col-md-4" style="padding: 0;">
+                                    <div class="input-group">
+                                        <div class="inputholder form-control date">
+                                            <input maxlength="2" class="dateField bdday" style="width: 24px;" type="text" placeholder="DD" onclick="this.focus();this.select()">
+                                            <input tabindex="-1" class="dateField bdmonth" style="width: 32px;" type="text" placeholder="MM" onclick="this.focus();this.select()">
+                                            <input maxlength="4" tabindex="-1" class="dateField bdyear" style="width: 40px;" type="text" placeholder="YYYY" onclick="this.focus();this.select()">
+                                        </div>
+                                        <input name="from_date" type="hidden" class="form-control bdpicker_hidden_input from_date" value="28-02-2018">
+                                        <div class="input-group-addon datepickerTrigger">
+                                            <span class="glyphicon glyphicon-calendar">
+                                                <span style="pointer-events:none;padding: 0;" class="datepicker"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label class="control-label col-md-2" for="">End Date</label>
+                                <div class="col-md-4" style="padding: 0;">
+                                    <div class="input-group">
+                                        <div class="inputholder form-control date">
+                                            <input maxlength="2" class="dateField bdday" style="width: 24px;" type="text" placeholder="DD" onclick="this.focus();this.select()">
+                                            <input tabindex="-1" class="dateField bdmonth" style="width: 32px;" type="text" placeholder="MM" onclick="this.focus();this.select()">
+                                            <input maxlength="4" tabindex="-1" class="dateField bdyear" style="width: 40px;" type="text" placeholder="YYYY" onclick="this.focus();this.select()">
+                                        </div>
+                                        <input name="to_date" type="hidden" class="form-control bdpicker_hidden_input to_date" value="10-04-2019">
+                                        <div class="input-group-addon datepickerTrigger">
+                                            <span class="glyphicon glyphicon-calendar">
+                                                <span style="pointer-events:none;padding: 0;" class="datepicker"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="col-md-8">
+                                <!--<div class="input-group">
+                                    <input type="Search" placeholder="User Name" class="form-control entryUserSearchIBox"/>
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-info entryUserSearchBtn">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </div>
+                                </div>-->
+                                <select class="selectpicker form-control entryUserSearchIBox required bs-select-hidden" multiple="multiple" name="entryUserSearchIBox" data-actions-box="true" data-live-search="true" data-width="200px" data-size="5" data-live-search-placeholder="Search" title="Select One" aria-hidden="true">
+                                                                            <option value="1">NHQ Admin</option>
+                                                                            <option value="2">Incharge Group B</option>
+                                                                            <option value="3">Incharge Group C</option>
+                                                                            <option value="4">Incharge Group MODC</option>
+                                                                            <option value="5">Incharge Pension Group</option>
+                                                                            <option value="6">Incharge A group</option>
+                                                                            <option value="7">Drafting Authority</option>
+                                                                            <option value="8">Deputy Drafting Authority</option>
+                                                                            <option value="9">Sec.Cdr.'A" group</option>
+                                                                            <option value="10">Sec.Cdr."B" group</option>
+                                                                            <option value="11">Sec.Cdr."C" group</option>
+                                                                            <option value="12">Sailors Pension</option>
+                                                                            <option value="13">M R Islam,REA-II(960081)</option>
+                                                                            <option value="14">Civil Staff Officer</option>
+                                                                            <option value="15">Drafting Cdr</option>
+                                                                            <option value="16">Tariqul Islam,LME(20050484)</option>
+                                                                            <option value="17">M M Hossain,L/REN(20080648)</option>
+                                                                            <option value="18">DCORD</option>
+                                                                            <option value="19">Md Shahin Alam, REA-IV(970274)</option>
+                                                                            <option value="20">Md Tariqul Islam, LEN (20080473)</option>
+                                                                            <option value="21">Moinul Islam, EN_I (20100424)</option>
+                                                                            <option value="22">Md Hafizur Rahman, AB (20140645)</option>
+                                                                            <option value="23">Md Masud Rana, ME-I (20141075)</option>
+                                                                            <option value="24">M Imtiaz Hossain, LME(20090171)</option>
+                                                                            <option value="25">Test User</option>
+                                                                            <option value="26">jalal hossain</option>
+                                                                            <option value="27">jalal khan</option>
+                                                                    </select><div class="btn-group bootstrap-select show-tick form-control entryUserSearchIBox required" style="width: 200px;"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Select One"><span class="filter-option pull-left">Select One</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off" placeholder="Search"></div><div class="bs-actionsbox"><div class="btn-group btn-group-sm btn-block"><button type="button" class="actions-btn bs-select-all btn btn-default">Select All</button><button type="button" class="actions-btn bs-deselect-all btn btn-default">Deselect All</button></div></div><ul class="dropdown-menu inner" role="menu"><li data-original-index="0"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">NHQ Admin</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Incharge Group B</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Incharge Group C</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Incharge Group MODC</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Incharge Pension Group</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Incharge A group</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="6"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Drafting Authority</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Deputy Drafting Authority</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="8"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Sec.Cdr.'A" group</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="9"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Sec.Cdr."B" group</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="10"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Sec.Cdr."C" group</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="11"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Sailors Pension</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="12"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">M R Islam,REA-II(960081)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="13"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Civil Staff Officer</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="14"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Drafting Cdr</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="15"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Tariqul Islam,LME(20050484)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="16"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">M M Hossain,L/REN(20080648)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="17"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">DCORD</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="18"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Md Shahin Alam, REA-IV(970274)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="19"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Md Tariqul Islam, LEN (20080473)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="20"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Moinul Islam, EN_I (20100424)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="21"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Md Hafizur Rahman, AB (20140645)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="22"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Md Masud Rana, ME-I (20141075)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="23"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">M Imtiaz Hossain, LME(20090171)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="24"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Test User</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="25"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">jalal hossain</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="26"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">jalal khan</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-success btn-sm entryUserSearchBtn">Search</button>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row col-sm-12">
+        <div class="box box-warning">
+            <div class="contentArea">
+
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <br>
+    <br>
+    <style>
+    .tag
+    {
+        margin-right:2px;
+        background:green;
+        color:white;
+        text-align:center;
+        padding:5px;
+    }
+    .dateField
+    {
+        border:0;
+        display:inline-block;
+        padding:0;
+    }
+    .inputholder
+    {
+        border:1px solid #ccc;
+        padding: 6px 12px;
+    }
+</style>
+
+<script>
+    // Custom Bootstrap Datepicker
+    $(document).ready(function () {
+        // initialization
+        $('.datepicker').datepicker({
+            format: "dd-mm-yyyy",
+            todayHighlight: true,
+            autoclose: true
+        }).datepicker("setDate",'now');
+
+        // essential properties
+        const newDate = new Date();
+        let rawInputDay;
+        let rawInputMonth;
+        let rawInputYear;
+        const monthNamesArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+        const monthNamesObj = {"Jan":0, "Feb": 1, "Mar": 2, "Apr":3, "May":4, "Jun":5, "Jul":6, "Aug":7, "Sept":8, "Oct":9, "Nov":10, "Dec":11};
+
+        // default date
+        $('.bdday').val(("0" + newDate.getDate()).slice(-2));
+        $('.bdmonth').val(monthNamesArr[newDate.getMonth()]);
+        $('.bdyear').val(newDate.getFullYear());
+        $('.bdpicker_hidden_input').val(
+            $('.datepicker').data('datepicker').getFormattedDate('dd-mm-yyyy')
+        );
+
+        // return parse max day of the inputed month
+        let maxdayFn = function(m,y){
+            return  new Date(y, m +1, 0).getDate();
+        };
+
+        // return max day of the inputed month
+        function maxDaysInMonth(m, y) { // m is 0 indexed: 0-11
+            switch (m) {
+                case 1 :
+                    return (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0)) ? 29 : 28;
+                case 8 : case 3 : case 5 : case 10 :
+                    return 30;
+                default :
+                    return 31
+            }
+        }
+
+        // return true/false of the inputed full date
+        function isValidDate(d, m, y) { // m is 0 indexed: 0-11
+            return m >= 0 && m < 12 && d > 0 && d <= maxDaysInMonth(m, y);
+        }
+
+        // return true/false of the inputed day
+        function isValidDay(d, m, y) { // m is 0 indexed: 0-11
+            return d > 0 && d <= maxDaysInMonth(m, y);
+        }
+
+        // return true/false of the inputed month
+        function isValidMonth(m) { // m is 0 indexed: 0-11
+            return m >= 0 && m < 12;
+        }
+
+        // return true/false of the inputed year
+        function isValidYear(year) {
+            if(isNaN(year))
+            {
+                return false;
+            }
+
+            let text = /^[0-9]+$/;
+            if(!year && !text.test(year))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        // custom bootstrap datepicker main function
+        function customBootstrapDatepicker(thisElement) {
+            let inputGroup = thisElement.closest('.input-group');
+            //let day = rawInputDay = ('.bdday').val();
+            let day = rawInputDay = inputGroup.find('.bdday').val();
+            let month = rawInputMonth = inputGroup.find('.bdmonth').val();
+            let year = rawInputYear = inputGroup.find('.bdyear').val();
+
+            // month setting
+            if (!isNaN(month))
+            {
+                month = monthNamesArr[month-1];
+                inputGroup.find('.bdmonth').val(month);
+            }
+
+            // year setting
+            if ((year.toString()).length < 3)
+            {
+                let yearLastStr = '';
+                if ((year.toString()).length == 1)
+                {
+                    yearLastStr = '0' + year.toString();
+                }
+                if ((year.toString()).length == 2)
+                {
+                    yearLastStr = year.toString();
+                }
+
+                let thisYear = new Date().getFullYear().toString();
+                thisYear = thisYear.substring(0, thisYear.length-2);
+                thisYear = thisYear + yearLastStr;
+                year = parseInt(thisYear);
+                inputGroup.find('.bdyear').val(year);
+            }
+            if ((year.toString()).length == 3 || (year.toString()).length > 4)
+            {
+                inputGroup.find('.bdyear').val(new Date().getFullYear());
+                year = new Date().getFullYear();
+            }
+
+            // check the full date is valid or not
+            /*if(!isValidDate(day,monthNamesObj[month],year)) //month is str ie. Jan, Feb ...
+            {
+                $('.bdday').val('0');
+            }*/
+
+            // check day is valid or not if not set valid
+            if(!isValidDay(day,monthNamesObj[month],year))
+            {
+                // $('.bdday').val('0');
+                day = maxDaysInMonth(monthNamesObj[month], year);
+                inputGroup.find('.bdday').val(day);
+                inputGroup.find('.bdday').select();
+                return false;
+            }
+
+            // check month is valid or not
+            if(!isValidMonth(monthNamesObj[month]))
+            {
+                //$('.bdmonth').val('0');
+                month = monthNamesArr[new Date().getMonth()];
+                inputGroup.find('.bdmonth').val(month);
+                inputGroup.find('.bdmonth').select();
+                return false;
+            }
+
+            // check year is valid or not
+            if(!isValidYear(year))
+            {
+                //$('.bdyear').val('0');
+                year = new Date().getFullYear();
+                inputGroup.find('.bdyear').val(year);
+                inputGroup.find('.bdyear').select();
+                return false;
+            }
+
+            // set the parsed full date to hidden input field
+            let formatedDate = day+'-'+monthNamesObj[month]+'-'+year;
+            inputGroup.find('.bdpicker_hidden_input').val(formatedDate);
+
+            // set the parsed full date to the datepicker
+            formatedDate = day+'-'+(monthNamesObj[month] + 1)+'-'+year;
+            //$('.datepicker').datepicker('setDate', formatedDate);
+            inputGroup.find('.datepicker').datepicker('setDate', formatedDate);
+        }
+
+        // the datepicker change event for change the values of all input fields
+        $(document).on('changeDate', '.datepicker', function(event) {
+            event.stopPropagation();
+            //console.log(event.date);
+            let inputGroup = $(this).closest('.input-group');
+            /*let month = $(".datepicker").data('datepicker').getFormattedDate('mm');*/
+            let month = inputGroup.find('.datepicker').data('datepicker').getFormattedDate('mm');
+            let year = inputGroup.find('.datepicker').data('datepicker').getFormattedDate('yyyy');
+            month = monthNamesArr[month-1];
+
+            inputGroup.find('.bdpicker_hidden_input').val(
+                inputGroup.find('.datepicker').data('datepicker').getFormattedDate('dd-mm-yyyy')
+            );
+            inputGroup.find('.bdday').val(
+                inputGroup.find('.datepicker').data('datepicker').getFormattedDate('dd')
+            );
+            inputGroup.find('.bdmonth').val(month);
+            inputGroup.find('.bdyear').val(year);
+        });
+
+        // for all date field on blur, paste or click the event will be fired
+        $(document).on('blur paste click','.dateField',function (e) {
+            $('.datepicker').datepicker('hide');
+            let thisElement = $(this);
+            customBootstrapDatepicker(thisElement);
+        });
+
+        // the click trigger for the datepicker popup open
+        $('.datepickerTrigger').click(function () {
+            $(this).find('.datepicker').datepicker('show');
+        });
+
+        // arrow key events
+        $(document).on('keyup','.dateField',function (e) {
+            //let thisRow = $(this).closest('tr');
+            if (e.keyCode == 37) { // left key
+                //thisRow.prev().find('.OFFICIAL_NO').focus();
+                $(this).prev().focus().select();
+            }
+            if ( e.keyCode == 39) // right key
+            {
+                //thisRow.next().find('.OFFICIAL_NO').focus();
+                $(this).next().focus().select();
+            }
+        });
+
+        /*// tab key stop for all date fields
+        document.querySelector('.dateField').addEventListener('keydown', function (e) {
+            if (e.which == 9) {
+                e.preventDefault();
+            }
+        });*/
+
+        // on key up event for month
+        $(document).on('keyup','.bdmonth', function (e) {
+            $('.datepicker').datepicker('hide');
+            let thisElement = $(this);
+            setTimeout(function(){ customBootstrapDatepicker(thisElement); }, 300);
+        });
+    });
+</script>    <script type="text/javascript">
+
+        $(document).on('click', ".entryUserSearchBtn", function (e) {
+
+            var userId = $('.entryUserSearchIBox').val();
+            if(!userId)
+            {
+                alert("Please Select An User");
+                return false;
+            }
+            var from_date = $('.from_date').val();
+            var to_date = $('.to_date').val();
+
+            $.ajax({
+                type: "post",
+                url: "http://localhost/bnsis/UsersDataEntryState/entryInfoByUserId",
+                data: {userId: userId, from_date:from_date, to_date:to_date},
+                beforeSend: function () {
+                    $(".contentArea").html("<img src='http://localhost/bnsis/dist/img/loader-small.gif' />");
+                },
+                success: function (data) {
+                    $(".contentArea").html(data);
+                }
+            });
+        });
+
+
+        //Enter and Tab Event for search box
+        $(document).on('keydown', '.entryUserSearchIBox', function (e) {
+            if (e.keyCode == 13 || e.keyCode == 9) {
+                e.preventDefault();
+                $('.entryUserSearchBtn').trigger("click");
+            }
+        });
+
+        $(document).on("click", ".print", function (e) {
+            e.preventDefault();
+            Popup($("#printablediv").html());
+        });
+
+    </script>                    <div id="reportShowArea" class="row"></div>
+                    <!--   RIGHT SIDE MENU START HERE     -->
+                    <!-- <div id="side_menu_right">
+                        <div class="user">
+                            <i class="fa fa-user fa-lg"></i>
+                            <a href="#" target="_blank" class="navbar-link">Administrator</a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item active"
+                               data-poload="https://tr.instela.com/api/v2/list?op=today"
+                               data-container="body" data-toggle="popover" data-placement="left">Accounts Settings</a>
+                            <a href="#" class="list-group-item tooptip_content" data-tooltip="Notice">Notice <span
+                                    class="label label-danger pull-right">14</span></a>
+                            <a href="#" class="list-group-item">Punishments</a>
+                            <a href="#" class="list-group-item">Messages <span
+                                    class="label label-default pull-right">0</span></a>
+                            <a href="#subTest" class="list-group-item">Complains <span
+                                    class="label label-danger pull-right">8</span></a>
+                            <a href="#" class="list-group-item">Rank</a>
+                            <a href="#" class="list-group-item">Warnings <span
+                                    class="label label-danger pull-right">2</span></a>
+                        </div>
+                    </div> -->
+                    <!--   RIGHT SIDE MENU END HERE     -->
+
+                    <!-- <div class="modal fade" id="showDetaildModal">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                    <h3 class="modal-title" id="showDetaildModalTile"></h3>
+                                </div>
+                                <div class="modal-body" id="showDetaildModalBody"></div>
+                                <div class="modal-footer">
+                                    <a data-dismiss="modal" class="btn btn-default" href="#">Close</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="modal fade" id="showDetaildModal" data-backdrop="static">
+                        <div id="modalSize" class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                    <h3 class="modal-title" id="showDetaildModalTile"></h3>
+                                </div>
+                                <div class="modal-body" id="showDetaildModalBody"></div>
+                                <div class="modal-footer">
+                                    <a data-dismiss="modal" class="btn btn-default" href="http://localhost/bnsis/UsersDataEntryState#">Close</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- start modal partial -->
+
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="partialModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="partialModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+
+                Form not found
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- end modal partial -->
+
+                </div>
+                <div class="footer">
+                    <div class="footer_p">
+
+                        <div class="pull-right">
+                            <strong> Developed By
+                                <a target="_blank" href="http://www.atilimited.net/">
+                                    <span style="color: red;">ATI</span>
+                                    <span style="color: green;">Limited</span>
+                                </a></strong>
+                        </div>
+                        <div>
+                            <strong>Copyright</strong> BNSIS © 2019                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+        <!-- /container -->
+        <script>
+    /*Numbers integer numbers only*/
+    $(document).on('keypress', '.integerNumbersOnly', function(event) {
+        var strLength = $(this).val().length;
+        if(strLength < 8 ){
+            var key = window.event ? event.keyCode : event.which;
+            if (event.keyCode === 8 || event.keyCode === 9 || event.keyCode === 46 || event.keyCode === 37 || event.keyCode === 39) {
+                return true;
+            }
+            else if ( key < 48 || key > 57 ) {
+                return false;
+            }
+            else return true;
+        }else{
+            var key = window.event ? event.keyCode : event.which;
+            if (event.keyCode === 8 || event.keyCode === 9 || event.keyCode === 46 || event.keyCode === 37 || event.keyCode === 39) {
+                return true;
+            }
+            else if ( key < 48 || key > 57 ) {
+                return false;
+            }
+            return false;
+        }
+    });
+    /*end part Numbers integer numbers only*/
+
+    $(document).on("click", ".formSubmit", function () {
+        var field = $(this).closest('form').find('.required');
+        var isValid = 0;
+        var status = $('.BASIC_CODE').attr('status');
+        status = (status == '' || status == undefined )? $('.BASIC_CODE_CONDITION').attr('status') : status;
+        $(field, '.required').each(function () {
+            $(this).keyup(function () {
+                $(this).css("border", "1px solid #ccc");
+            });
+            $(this).change(function () {
+                $(this).next('span').css("border", "1px solid #ccc");
+                $(this).next('div').find('button').css("border", "1px solid #ccc");
+            });
+
+            var attr_name = $(this).attr('name');
+
+            if ($(this).val() == ""  && typeof attr_name != 'undefined') {
+                var label = $(this).parent().siblings("label").text();
+                $(this).siblings(".validation").html(label + " is required");
+                $(this).css("border", "1px solid red");
+                $(this).next('div').find('button').css("border", "1px solid red");
+                $(this).next('span').css("border", "1px solid red");
+                isValid = 1;
+                //return false;
+            }else if(status == "duplicate_code"){
+                $(".BASIC_CODE").css("border", "1px solid red");
+                $(".BASIC_CODE_CONDITION").css("border", "1px solid red");
+                isValid = 1;
+            } else {
+                $(this).siblings(".validation").html("");
+                $(this).css("border", "1px solid #ccc");
+                $(this).next('span').css("border", "1px solid #ccc");
+                $(".BASIC_CODE").css("border", "1px solid #ccc");
+                $(".BASIC_CODE_CONDITION").css("border", "1px solid #ccc");
+            }
+        });
+        if (isValid == 0) {
+            if (confirm("Are You Sure?")) {
+                var frmContent = $(".frmContent").serialize();
+                var action_uri = $(this).attr("data-action");
+                var type = $(this).attr("data-type");
+                var success_action_uri = $(this).attr("data-su-action");
+                var ac_type = $(this).attr("");
+                var param = "";
+                if (type != "list") {
+                    param = $(".rowID").val();
+                }
+                var sn = $("#loader_" + param).siblings("span").text();
+                $.ajax({
+                    type: "post",
+                    data: frmContent,
+                    url: "http://localhost/bnsis//" + action_uri,
+                    beforeSend: function () {
+                        $(".loadingImg").html("<img src='http://localhost/bnsis/dist/img/loader-small.gif' />");
+                    },
+                    success: function (data) {
+                        $(".loadingImg").html("");
+                        $(".frmMsg").html(data);
+                        $.ajax({
+                            type: "post",
+                            data: {param: param},
+                            url: "http://localhost/bnsis//" + success_action_uri,
+                            beforeSend: function () {
+                                if (type != "list") {
+                                    $("#loader_" + param).removeClass("hidden").html("<img src='http://localhost/bnsis/dist/img/loader-small.gif' style='width:10px;' />").siblings("span").addClass("hidden");
+                                }
+                            },
+                            success: function (data1) {
+                                //$(".loadingImg").html("");
+                                if (type == "list") {
+                                    $(".contentArea").html(data1);
+                                    /*$(".gridTable").dataTable();*/
+                                } else if (type == "msg") {
+                                    $('#rinci').html(response).modal();
+                                } else {
+                                    $("#loader_" + param).addClass("hidden").html("").siblings("span").removeClass("hidden");
+                                    $("#row_" + param).html(data1);
+                                    $("#loader_" + param).siblings("span").html(sn);
+                                }
+                            }
+                        });
+                    }
+                });
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    });
+    $(document).on("click", ".deleteItem", function () {
+        if (confirm("Are You Sure?")) {
+            var item_id = $(this).attr("id");
+            var data_field = $(this).attr("data-field");
+            var data_tbl = $(this).attr("data-tbl");
+            $.ajax({
+                type: "post",
+                url: "http://localhost/bnsis/setup/common/deleteItem/",
+                data: {item_id: item_id, data_field: data_field, data_tbl: data_tbl},
+                beforeSend: function () {
+                    $("#loader_" + item_id).html("<img src='http://localhost/bnsis/dist/img/loader-small.gif' />");
+                },
+                success: function (data) {
+                    if (data == "Y") {
+                        $("#row_" + item_id).remove();
+                    } else {
+                        alert("Row Delete Field");
+                    }
+                }
+            });
+        } else {
+            return false;
+        }
+    });
+    $(document).on("click", ".deleteItemAjaxDataTable", function () {
+        if (confirm("Are You Sure?")) {
+            var sn = $(this).attr("sn");
+            var item_id = $(this).attr("id");
+            var data_field = $(this).attr("data-field");
+            var data_tbl = $(this).attr("data-tbl");
+            $.ajax({
+                type: "post",
+                url: "http://localhost/bnsis/setup/common/deleteItem/",
+                data: {item_id: item_id, data_field: data_field, data_tbl: data_tbl},
+                beforeSend: function () {
+                    $("#loader_" + sn).html("<img src='http://localhost/bnsis/dist/img/loader-small.gif' />");
+                },
+                success: function (data) {
+                    if (data == "Y") {
+                        $("#row_" + sn).hide();
+
+                    } else {
+                        alert("Row Delete Field");
+                    }
+                }
+            });
+        } else {
+            return false;
+        }
+    });
+
+    $(document).on('click', '.itemStatus', function () {
+        if (confirm("Are You Sure?")) {
+            var item_id = $(this).attr("id");
+            var data_sn = $(this).attr("data-sn");
+            var status = $(this).attr("data-status");
+            var data_tbl = $(this).attr("data-tbl");
+            var data_field = $(this).attr("data-field");
+            var data_fieldId = $(this).attr("data-fieldId");
+            var data_su_url = $(this).attr("data-su-url");
+            var success_url = "http://localhost/bnsis//" + data_su_url;
+            if( typeof data_sn === 'undefined'){
+                var sn = $("#loader_" + item_id).siblings("span").text();
+            }else{
+                var sn = $("#loader_" + data_sn).siblings("span").text();
+            }
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost/bnsis//setup/common/statusItem',
+                data: {
+                    item_id: item_id,
+                    status: status,
+                    data_tbl: data_tbl,
+                    data_field: data_field,
+                    data_fieldId: data_fieldId
+                },
+                beforeSend: function () {
+                    if( typeof data_sn === 'undefined'){
+                        $("#loader_" + item_id).html("<img src='http://localhost/bnsis/dist/img/loader-small.gif' />");
+                    }else{
+                        $("#loader_" + data_sn).html("<img src='http://localhost/bnsis/dist/img/loader-small.gif' />");
+                    }
+                },
+                success: function (data) {
+                    if (data == "Y") {
+                        $.ajax({
+                            type: 'POST',
+                            url: success_url,
+                            data: {param: item_id},
+                            beforeSend: function () {
+                                $("#loader_" + item_id).removeClass("hidden").html("<img src='http://localhost/bnsis/dist/img/loader-small.gif' style='width:10px;' />").siblings("span").addClass("hidden");
+                            },
+                            success: function (data1) {
+                                if( typeof data_sn === 'undefined'){
+                                    $("#loader_" + item_id).addClass("hidden").html("").siblings("span").removeClass("hidden");
+                                    $("#row_" + item_id).html(data1);
+                                    $("#loader_" + item_id).siblings("span").html(sn);
+                                    if(item_id != ''){
+                                        $("#row_" + item_id).html(data1);
+                                    }
+                                }else {
+                                    $("#loader_" + data_sn).addClass("hidden").html("").siblings("span").removeClass("hidden");
+                                    $("#row_" + data_sn).html(data1);
+                                    $("#loader_" + data_sn).siblings("span").html(sn);
+                                    if(data_sn != ''){
+                                        $("#row_" + data_sn).html(data1);
+                                    }
+                                }
+                            }
+                        });
+                    } else {
+                        return false;
+                    }
+                }
+            });
+        } else {
+            return false;
+        }
+    });
+
+
+    /*submit with redirect root folder*/
+    $(document).on("click", ".formSubmitWithRedirect", function () {
+        var isValid = 0;
+        $('.required').each(function () {
+            $(this).keyup(function () {
+                $(this).css("border", "1px solid #ccc");
+            });
+            $(this).change(function () {
+                $(this).next('span').css("border", "1px solid #ccc");
+            });
+            if ($(this).val() == "") {
+                var label = $(this).parent().siblings("label").text();
+                //alert(label + " Is Empty");
+                $(this).siblings(".validation").html(label + " is required");
+                $(this).css("border", "1px solid red");
+                $(this).next('span').css("border", "1px solid red");
+                $(this).next('.chosen-container').css("border", "1px solid red");
+                isValid = 1;
+                //return false;
+            } else {
+                $(this).siblings(".validation").html("");
+                $(this).css("border", "1px solid #ccc");
+                $(this).next('span').css("border", "1px solid #ccc");
+                $(this).next('.chosen-container').css("border", "1px solid #ccc");
+            }
+        });
+        if (isValid == 0) {
+            if (confirm("Are You Sure?")) {
+               // var frmContent = $(".frmContent").serialize();
+                var frmContent = new FormData($(".frmContent")[0]);
+                var action_uri = $(this).attr("data-action");
+                var type = $(this).attr("data-type");
+                //var success_redirect_uri = $(this).attr("data-redirect-action");
+                //var ac_type = $(this).attr("");
+                var param = "";
+                if (type != "list") {
+                    param = $(".rowID").val();
+                }
+                var sn = $("#loader_" + param).siblings("span").text();
+                $.ajax({
+                    type: "post",
+                    data: frmContent,
+                    url: "http://localhost/bnsis/" + action_uri,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    beforeSend: function () {
+                        $(".loadingImg").html("<img src='http://localhost/bnsis/dist/img/loader-small.gif' />");
+                    },
+                    success: function (data) {
+                        $(".loadingImg").html("");
+                        $(".frmMsg").html(data);
+//                        $("#MainForm").load(location.href + " #MainForm", function() {
+//                            $(".select2").select2();
+//                            $(".selectpicker").selectpicker("refresh");
+//                        });
+//                          setTimeout(function(){// wait for 5 secs(2)
+//                              location.reload(); // then reload the page.(3)
+//                          }, 1000);
+                        /*document.getElementById("MainForm").reset();
+                        $("#sailorTable").find("tr:not(:last)").remove();
+                        $(".select2").select2("");
+                        $(".selectpicker").selectpicker("refresh");
+                        */
+                    }
+                });
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    });
+
+    /*Numbers floating & integer value only*/
+    $('.numbersOnly').keypress(function(event) {
+
+        if(event.which == 8 || event.keyCode == 37 || event.keyCode == 39 || event.keyCode == 46 || event.keyCode == 9)  /*keyCode is 9 tends to tab*/
+            return true;
+        else if((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57))
+            event.preventDefault();
+    });
+    /*end part Numbers floating & integer value only*/
+
+    $(document).on('change', '#SHIP_AREA_ID', function () {
+        var SHIP_AREA_ID = $(this).val();
+        if(SHIP_AREA_ID != ''){
+            $("#authorityName").prop("disabled", true);
+            $("#authorityName").removeClass('required');
+
+            $("#AUTHORITY_ZONE_ID").prop("disabled", true);
+            $("#AUTHORITY_ZONE_ID").removeClass('required');
+
+            $("#AUTHORITY_AREA_ID").prop("disabled", true);
+            $("#AUTHORITY_AREA_ID").removeClass('required');
+
+            $("#SHIP_ESTABLISHMENT_ID").addClass('required');
+
+        }else{
+            $("#authorityName").prop("disabled", false);
+            $("#authorityName").addClass('required');
+
+            $("#AUTHORITY_ZONE_ID").prop("disabled", false);
+            $("#AUTHORITY_ZONE_ID").addClass('required');
+
+            $("#AUTHORITY_AREA_ID").prop("disabled", false);
+            $("#AUTHORITY_AREA_ID").addClass('required');
+        }
+    });
+    $(document).on('change', '#AUTHORITY_ZONE_ID', function () {
+        var AUTHORITY_ZONE_ID = $(this).val();
+        if(AUTHORITY_ZONE_ID != ''){
+            $("#authorityName").prop("disabled", true);
+            $("#authorityName").removeClass('required');
+
+            $("#SHIP_AREA_ID").prop("disabled", true);
+            $("#SHIP_AREA_ID").removeClass('required');
+
+            $("#SHIP_ESTABLISHMENT_ID").prop("disabled", true);
+            $("#SHIP_ESTABLISHMENT_ID").removeClass('required');
+
+            $("#AUTHORITY_AREA_ID").addClass('required');
+
+        }else{
+            $("#authorityName").prop("disabled", false);
+            $("#authorityName").addClass('required');
+
+            $("#SHIP_AREA_ID").prop("disabled", false);
+            $("#SHIP_AREA_ID").addClass('required');
+
+            $("#SHIP_ESTABLISHMENT_ID").prop("disabled", false);
+            $("#SHIP_ESTABLISHMENT_ID").addClass('required');
+        }
+    });
+    $(document).on('blur', '#authorityName', function () {
+        var authorityName = $(this).val();
+        if(authorityName != ''){
+            $("#AUTHORITY_ZONE_ID").prop("disabled", true);
+            $("#AUTHORITY_ZONE_ID").removeClass('required');
+
+            $("#AUTHORITY_AREA_ID").prop("disabled", true);
+            $("#AUTHORITY_AREA_ID").removeClass('required');
+
+            $("#SHIP_AREA_ID").prop("disabled", true);
+            $("#SHIP_AREA_ID").removeClass('required');
+
+            $("#SHIP_ESTABLISHMENT_ID").prop("disabled", true);
+            $("#SHIP_ESTABLISHMENT_ID").removeClass('required');
+
+        }else{
+            $("#AUTHORITY_ZONE_ID").prop("disabled", false);
+            $("#AUTHORITY_ZONE_ID").addClass('required');
+
+            $("#AUTHORITY_AREA_ID").prop("disabled", false);
+            $("#AUTHORITY_AREA_ID").addClass('required');
+
+            $("#SHIP_AREA_ID").prop("disabled", false);
+            $("#SHIP_AREA_ID").addClass('required');
+
+            $("#SHIP_ESTABLISHMENT_ID").prop("disabled", false);
+            $("#SHIP_ESTABLISHMENT_ID").addClass('required');
+        }
+    });
+
+    $(function(){
+        var base = "http://localhost";
+
+        var activeURL = window.location.pathname;
+        var urlArray = activeURL.split('/');
+
+        var url = '';
+        for(var i = 1; i < (urlArray.length-1); i++){
+            url += '/'+ urlArray[i];
+        }
+        var baseURL = base+url;
+
+        /*create part*/
+        var createMethod = urlArray[urlArray.length-1].split('_');
+        var createActiveLink = base+url+'/'+createMethod[0];
+        var pathLast, secPathLast;
+        /*end part*/
+
+        /*edit part*/
+        var url = '';
+        for(var i = 1; i < (urlArray.length-2); i++){
+            url += '/'+ urlArray[i];
+        }
+        var editActiveLink = base+url;
+        /*end part*/
+
+
+
+        $("ul.sidebar-menu li").each(function() {
+            var dataPath = $(this).find('a').attr('href');
+
+            pathLast = dataPath.split('_');
+            secPathLast = pathLast[0] + '_' + pathLast[1];
+
+            if (dataPath.toLowerCase() == baseURL.toLowerCase()) { /*normal url */
+                $(this).addClass("active");
+                $(this).parent('ul').addClass('in').find('li').removeClass('collapse').attr('aria-expanded', 'true');
+                $(this).parent('ul').parent('ul').addClass('in').find('li').removeClass('collapse').attr('aria-expanded', 'true');
+            }else if(createActiveLink.toLowerCase() == secPathLast.toLowerCase()){ /*if check create split part create*/
+                $(this).addClass("active");
+                $(this).parent('ul').addClass('in').find('li').removeClass('collapse').attr('aria-expanded', 'true');
+                $(this).parent('ul').parent('ul').addClass('in').find('li').removeClass('collapse').attr('aria-expanded', 'true');
+            }else if(editActiveLink.toLowerCase() == dataPath.toLowerCase()){ /*if check edit url & li url*/
+                $(this).addClass("active");
+                $(this).parent('ul').addClass('in').find('li').removeClass('collapse').attr('aria-expanded', 'true');
+                $(this).parent('ul').parent('ul').addClass('in').find('li').removeClass('collapse').attr('aria-expanded', 'true');
+            }
+        });
+
+    });
+</script>
+        
+<script type="text/javascript" src="./Sailor Information System __ Users Data Entry State Info_files/chosen.jquery.min.js"></script>
+<script>
+    jQuery(document).ready(function(){
+        jQuery(".chosen-select").chosen();
+        $('.chosen-single').css({'height':'34px','line-height':'33px'});
+    });
+//    For Selected Row Background
+    $(document).on('click', '.colorRow', function () {
+        $(this).attr('data-color', 1);
+        $('tbody tr').each(function () {
+            var isClick =parseInt($(this).attr('data-color'));
+            if(isClick===1){
+                $(this).attr('data-color', 0).css("background-image", "linear-gradient(#f9fcf7, #eff7ea)");
+            } else {
+                $(this).css("background-image", "");
+            }
+        });
+    });
+</script>
+
+<script src="./Sailor Information System __ Users Data Entry State Info_files/bootstrap.js"></script>
+<script src="./Sailor Information System __ Users Data Entry State Info_files/holder.js"></script>
+<script src="./Sailor Information System __ Users Data Entry State Info_files/tinymce.js"></script>
+<script src="./Sailor Information System __ Users Data Entry State Info_files/main.js"></script>
+<script src="./Sailor Information System __ Users Data Entry State Info_files/custom.js"></script>
+<script src="./Sailor Information System __ Users Data Entry State Info_files/redactor.min.js"></script>
+<script src="./Sailor Information System __ Users Data Entry State Info_files/metisMenu.js"></script> 		<!-- New metisMenu add  -->
+        <script type="text/javascript">
+            $(document).on('click','.clearAllBtn',function () {
+                location.reload()
+            });
+            /*Menu collapse when one part active*/
+            $('.collapsed').on('click', function(){
+                /*var parentDataTarget = $(this).parent().attr('id');
+                var dataTarget = $(this).attr('data-target');*/
+
+                /*var cls = $(this).attr('class');
+                $('li').not(this).removeClass('active');
+                if(cls != "active"){
+                    $(this).addClass('active');
+                    $(this).siblings().removeClass('in');
+                }
+
+                $('li').siblings().addClass('collapsed');
+                $(this).parent('ul').prev().addClass('active');
+
+                $(this).parent().parent().addClass('active');
+                */
+            });
+            /*end menu collapse when one part active*/
+
+            /*$(function () {
+                var active = true;
+                $('#menu').on('show.bs.collapse', function () {
+                    if (active) $('#menu .in').collapse('hide');
+                });
+            });*/
+            /*$('.panel-collapse').on('hidden.bs.collapse', function () {
+              // find the children and close them
+              $(this).find('.collapse').collapse('hide');
+            });*/
+            $('#menu').click(function(){
+                //alert("okk");
+            });
+            $(function() {
+                $('#menu').metisMenu({
+                    doubleTapToGo: true
+                });
+
+                $('#removableButton').on('click', function(event){
+                    $('#menu').metisMenu('dispose');
+                    $('#removable').remove();
+                    $('#menu').metisMenu();
+                });
+            });
+            $(document).ready(function () {
+
+                /*For menu Collaps*/
+                /*End*/
+
+                $('.redactor').redactor();
+
+                var path = window.location.href;
+                path = path.replace(/\/$/, "");
+                path = decodeURIComponent(path);
+                $(".sidebar-menu a").each(function () {
+                    var href = $(this).attr('href');
+                    if (path === href) {
+                        $(this).closest('li').addClass('active');
+                        $(this).parents('ul').addClass('in');
+                        $(this).parents('ul').prev('li').removeClass('collapsed');
+                    }
+                });
+
+                // dynamic modal
+                $(document).on("click", ".modalLink", function (e) {
+
+
+                    var modal_size = $(this).attr('data-modal-size');
+
+                    if ( modal_size!=='' && typeof modal_size !== typeof undefined && modal_size !== false ) {
+                        $("#modalSize").addClass(modal_size);
+                    }
+                    else{
+                        $("#modalSize").addClass('modal-md');
+                    }
+
+
+                    var title = $(this).attr('title');
+                    $("#showDetaildModalTile").text(title);
+
+                    var data_title = $(this).attr('data-original-title');
+                    $("#showDetaildModalTile").text(data_title);
+
+                    $.ajax({
+                        type: "POST",
+                        url: $(this).attr('href'),
+                        //data: $.parseJSON($(this).attr('mmh_data')),
+                        success: function (data) {
+                            $("#showDetaildModalBody").html(data);
+                            $("#showDetaildModal").modal('show');
+                        }
+                    });
+                    e.preventDefault();
+                });
+
+
+                // CRUD delete globally
+
+                $(document).on("click", "a.ajaxDelete", function (e) {
+
+                    var result = confirm("Want to delete?");
+
+                    if (result == true) {
+
+                        var url = $(this).attr('href');
+
+                        var removeRow = $(this).parent().parent();
+
+                        $.ajax({
+                            url: url,
+                            type: 'POST',
+                            dataType: 'JSON',
+                            success: function (data) {
+
+                                $("#resultNotification").html(data.msg);
+                                if (data.result == 'success') {
+                                    removeRow.remove();
+                                }
+                            }
+                        });
+                    }
+
+                    e.preventDefault();
+
+                });
+
+                // CRUD delete globally
+
+                // BOOTSTRAP SIDE MENU
+                //$('#side_menu_right').BootSideMenu({side: "right"});
+
+                // POPOPER MENU START
+                $('*[data-poload]').click(function () {
+                    var e = $(this);
+                    e.off('hover');
+                    $.get(e.data('poload'), function (d) {
+                        e.popover({content: d}).popover('show');
+                    });
+                });
+                // qTip2
+//                $('.tender_groups').each(function () {
+//                    $(this).qtip({ // Grab all elements with a non-blank data-tooltip attr.
+//                        content: {
+//                            title: {
+//                                text: 'About me',
+//                                button: 'Close'
+//                            },
+//                            ajax: {
+//                                url: $(this).attr('data-url')
+//                            }
+//                        },
+//                        position: {
+//                            my: 'right top',  // Position my top left...
+//                            at: 'left center' // at the bottom right of..
+//                        },
+//                        style: {
+//                            classes: 'qtip-tipped'
+//                        },
+//                        show: {
+//                            solo: true
+//                        },
+//                        hide: false // Don't hide on any event except close button
+//                    });
+//                });
+                $('.notification-menu-item').each(function () {
+                    $(this).qtip({ // Grab all elements with a non-blank data-tooltip attr.
+                        content: {
+                            title: {
+                                text: 'About me',
+                                button: 'Close'
+                            },
+                            ajax: {
+                                url: $(this).attr('data-url')
+                            }
+                        },
+                        position: {
+                            my: 'top left',  // Position my top left...
+                            at: 'bottom center' // at the bottom right of..
+                        },
+                        style: {
+                            classes: 'qtip-tipped',
+                            width:300,
+                            height:400
+                        },
+                        show: {
+                            solo: true
+                        },
+                        hide: false // Don't hide on any event except close button
+                    });
+                });
+                // partial modal
+                $('#modalPartial').click(function () {
+                    var title = $(this).attr('data-title');
+                    $("#partialModalLabel").text(title);
+                });
+
+
+
+    })
+    ;
+
+            $(function () {
+                $('.dateTimePicker').datetimepicker({
+                    format: 'DD-MM-YYYY'
+                });
+            });
+        </script>
+    
+
+</div></body><div><div class="gr_-editor gr-iframe-first-load" style="display: none;"><div class="gr_-editor_back"></div><iframe class="gr_-ifr gr-_dialog-content" src="./Sailor Information System __ Users Data Entry State Info_files/saved_resource.html"></iframe></div></div><grammarly-card><div></div></grammarly-card><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

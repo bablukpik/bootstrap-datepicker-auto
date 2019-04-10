@@ -1,0 +1,195 @@
+.padding0 { padding: 0;}
+.margin-right5{ margin-right: 5px;}
+p.help-block{
+    margin-bottom: 12px !important;
+}
+
+.item-organization-tab{
+    width: 60%;
+    display: block;
+    clear: both;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.bg-primary{
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
+
+#dgdpMainForm .dateContainer .form-control-feedback {
+    top: 0;
+    right: -15px;
+}
+.user{
+    padding:5px;
+    margin-bottom: 5px;
+}
+.popover{ min-width: 500px !important;}
+
+a.user-menu{
+    text-transform: uppercase;
+    color: #f8f8f8 !important;
+}
+
+/* =========================== TOP NOTIFICATION COUNTER STYLE ==========================*/
+.ttw-notification-menu {
+    font-family: Arial, sans-serif;
+    height: 28px;
+    padding: 0;
+    border-bottom: 1px solid #d1d1d1;
+    display: block;
+    margin-bottom: 0;
+
+}
+
+.notification-menu-item {
+    display: block;
+    position: relative;
+    float: left;
+    border-right: 1px solid #d1d1d1;
+}
+.notification-menu-item.last-item {
+    border-right: none;
+}
+.notification-menu-item a {
+    display: block;
+    color: #666;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 28px;
+    padding: 0 5px;
+}
+.notification-menu-item:hover a {
+    color: #333;
+}
+.notification-menu-item a {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+/* =========================== TOP NOTIFICATION COUNTER STYLE END ==========================*/
+
+.breadcrumb { padding: 5px; border-radius: 0; margin-bottom: 0; background: linear-gradient(#e3e3e3, #f2f2f2, #e3e3e3);}
+
+.list-group-item a{ font-size: 13px;}
+#dashboard-hilight .alert{ border-radius: 0;}
+
+.gr-bg{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+
+}
+.qtip-close1{left: -13px; float: left !important; right: auto;}
+.qtip{ max-width: 600px !important;}
+.qtip-content .list-group .list-group-item{ border: 0; border-bottom: 1px solid #e3e3e3; margin-bottom: 0; font-family: verdana;}
+
+
+/*Custom Css by Saif*/
+#sidebar-wrapper{background: #2f4050;}
+#sidebar-wrapper ul.sidebar-menu li {background: #2f4050 none repeat scroll 0 0; border: none !important; padding: 15px 0 15px 10px }
+#sidebar-wrapper ul.sidebar-menu li a{font-family: Arial; font-size: 14px; font-weight: normal; color: #f8f8f8;}
+#sidebar-wrapper ul.sidebar-menu a i {width: 22px;}
+#sidebar-wrapper ul.sidebar-menu ul li { background: #2f4050none repeat scroll 0 0;  padding: 8px 0 8px 30px}
+
+.navbar-inverse, .navbar-side {background-color: #0a195c; background:linear-gradient(#1E427E,#001b4d); }
+.navbar-side .navbar-toggle-primary {
+    background: #000 none repeat scroll 0 0;
+    border-color: #556a2f;
+}
+
+.navbar-inverse:hover, .navbar-side:hover, .navbar-inverse:focus, .navbar-side:focus {background-color: #0a195c; }
+
+.navbar-side .navbar-toggle-primary {
+    background: #000 none repeat scroll 0 0;
+    border-color: #556a2f;
+}
+.navbar-side .navbar-toggle-primary:focus, .navbar-side .navbar-toggle-primary:hover {
+    background: #000 none repeat scroll 0 0;
+    border-color: #556a2f;
+}
+.navbar-side .navbar-brand{
+    color: #f8f8f8;
+    padding: 15px 15px 15px;
+}
+.navbar-side .navbar-brand:hover {
+    color: #f8f8f8;
+    font-family: open_sansbold;
+}
+.navbar-side .navbar-brand img {
+    float: left;
+    margin-top:-10px;
+    margin-right: 5px;
+}
+
+/*Change by Mashnoon starts from here*/
+#sidebar-wrapper ul.sidebar-menu li:hover
+{
+	background: #19AA8D; /* For browsers that do not support gradients */
+    background:linear-gradient(#19AA8D, #1e9275); /* Standard syntax */
+    background:-webkit-linear-gradient(#19AA8D, #1e9275);/* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#19AA8D, #1e9275); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#19AA8D, #1e9275); /* For Firefox 3.6 to 15 */
+}
+#sidebar-wrapper ul.sidebar-menu ul li:hover
+{
+    background: #19AA8D; /* For browsers that do not support gradients */
+    background:linear-gradient(#19AA8D, #1e9275); /* Standard syntax */
+    background:-webkit-linear-gradient(#19AA8D, #1e9275);/* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#19AA8D, #1e9275); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#19AA8D, #1e9275); /* For Firefox 3.6 to 15 */
+}
+#sidebar-wrapper ul.sidebar-menu li.active, #sidebar-wrapper ul.sidebar-menu ul li.active
+{
+
+    background: #19AA8D; /* For browsers that do not support gradients */
+    background:linear-gradient(#19AA8D, #1e9275); /* Standard syntax */
+    background:-webkit-linear-gradient(#19AA8D, #1e9275);/* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#19AA8D, #1e9275); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#19AA8D, #1e9275); /* For Firefox 3.6 to 15 */
+}
+/*Change by Mashnoon ends here*/
+
+.panel{ border: 0;}
+.panel-base > .panel-heading{ background: #fff; padding: 5px; margin-bottom: 2px;}
+.panel-body{ padding: 10px 5px; border-top: 1px solid #ddd;}
+.table > thead > tr > th, .table > thead > tr > td,
+.table > tbody > tr > th, .table > tbody > tr > td,
+.table > tfoot > tr > th, .table > tfoot > tr > td
+{
+    padding: 4px; font-size: 12px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th
+{
+    font-family: arial;
+}
+table.dataTable{ margin-top: 0 !important;}
+.dataTables_wrapper .row:first-child{ background: linear-gradient(#e3e3e3, #f2f2f2, #e3e3e3); margin: 0; padding-top: 3px; border:1px solid #ddd; border-bottom: 1px solid #fff;}
+.panel-title {
+    font-family: arial;
+    font-weight: bold;
+}
+
+.legend{
+    width: 95% !important;
+    font-size: 13px;
+    font-weight: bold;
+}
+.input-form-padding-right-empty {
+    padding-right:10px !important;
+}
+
+#VISIT_INFO_ID + div > button + div{
+  position: absolute; top:35px; left: -237px;
+}
