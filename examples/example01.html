@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example 01</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        .dateField
+        {
+            border:0;
+            display:inline-block;
+            padding:0;
+        }
+        .inputholder
+        {
+            border:1px solid #ccc;
+            padding: 6px 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-base" style="box-shadow: none; margin-bottom: 0;">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h3 class="panel-title">Users Data Entry Statement</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body custom_panel">
+                        <form class="form-horizontal" method="post">
+                            <div class="row">
+                                <div class="col-md-10">
+
+                                    <label class="control-label col-md-3">Start Date</label>
+                                    <div class="col-md-3">
+                                        <div class="input-group">
+                                            <div class="inputholder form-control date">
+                                                <input maxlength="2" class="dateField bdday" style="width: 24px;" type="text" placeholder="DD" onclick="this.focus();this.select()">
+                                                <input tabindex="-1" class="dateField bdmonth" style="width: 32px;" type="text" placeholder="MM" onclick="this.focus();this.select()">
+                                                <input maxlength="4" tabindex="-1" class="dateField bdyear" style="width: 40px;" type="text" placeholder="YYYY" onclick="this.focus();this.select()">
+                                            </div>
+                                            <input name="from_date" type="hidden" class="form-control bdpicker_hidden_input from_date" value="28-02-2018">
+                                            <div class="input-group-addon datepickerTrigger">
+                                                <span class="glyphicon glyphicon-calendar">
+                                                    <span style="pointer-events:none;padding: 0;" class="datepicker"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label class="control-label col-md-3">End Date</label>
+                                    <div class="col-md-3">
+                                        <div class="input-group">
+                                            <div class="inputholder form-control date">
+                                                <input maxlength="2" class="dateField bdday" style="width: 24px;" type="text" placeholder="DD" onclick="this.focus();this.select()">
+                                                <input tabindex="-1" class="dateField bdmonth" style="width: 32px;" type="text" placeholder="MM" onclick="this.focus();this.select()">
+                                                <input maxlength="4" tabindex="-1" class="dateField bdyear" style="width: 40px;" type="text" placeholder="YYYY" onclick="this.focus();this.select()">
+                                            </div>
+                                            <input name="to_date" type="hidden" class="form-control bdpicker_hidden_input to_date" value="10-04-2019">
+                                            <div class="input-group-addon datepickerTrigger">
+                                                <span class="glyphicon glyphicon-calendar">
+                                                    <span style="pointer-events:none;padding: 0;" class="datepicker"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-success btn-sm entryUserSearchBtn">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="../dist/keyboard.datepicker.js"></script>
+</body>
+</html>
