@@ -26,13 +26,24 @@ $(document).ready(function () {
     const monthNamesArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
     const monthNamesObj = {"Jan": 0, "Feb": 1, "Mar": 2, "Apr": 3, "May": 4, "Jun": 5, "Jul": 6, "Aug": 7, "Sept": 8, "Oct": 9, "Nov": 10, "Dec": 11};
 
-    // default date
-    $('.bdday').val(("0" + newDate.getDate()).slice(-2));
-    $('.bdmonth').val(monthNamesArr[newDate.getMonth()]);
-    $('.bdyear').val(newDate.getFullYear());
-    $('.bdpicker_hidden_input').val(
-        $('.datepicker').data('datepicker').getFormattedDate('dd-mm-yyyy')
-    );
+    /*default date area*/
+    let isHiddenDateVal = $('.bdpicker_hidden_input').val();
+    const getDate = string => (([day, month, year]) => ({ year, month, day }))(string.split('-'));
+    let isHiddenDateObj = getDate(isHiddenDateVal);
+    // check date is set for update or not
+    if(!isHiddenDateVal) {
+        $('.bdday').val(("0" + newDate.getDate()).slice(-2));
+        $('.bdmonth').val(monthNamesArr[newDate.getMonth()]);
+        $('.bdyear').val(newDate.getFullYear());
+        $('.bdpicker_hidden_input').val(
+            $('.datepicker').data('datepicker').getFormattedDate('dd-mm-yyyy') // set current date for hidden field
+        );
+    } else {
+        $('.bdday').val(isHiddenDateObj.day);
+        $('.bdmonth').val(monthNamesArr[parseInt(isHiddenDateObj.month)-1]);
+        $('.bdyear').val(isHiddenDateObj.year);
+        $(".datepicker").datepicker("update", isHiddenDateVal); // update datepicker's value
+    }
 
     // return parse max day of the inputed month
     let maxdayFn = function (m, y) {
@@ -206,13 +217,6 @@ $(document).ready(function () {
             $(this).next().focus().select();
         }
     });
-
-    /*// tab key stop for all date fields
-    document.querySelector('.dateField').addEventListener('keydown', function (e) {
-        if (e.which == 9) {
-            e.preventDefault();
-        }
-    });*/
 
     // on key up event for month
     $(document).on('keyup', '.bdmonth', function (e) {
